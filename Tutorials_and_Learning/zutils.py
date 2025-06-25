@@ -29,11 +29,11 @@ def generate_2bit_flipflop_dataset(
         np.random.seed(seed)
 
     # Initialize data storage arrays
-    inputs = np.zeros((num_trials, trial_length, 2), dtype=np.float32)
-    targets = np.zeros((num_trials, trial_length, 2), dtype=np.float32)
+    inputs = np.zeros((num_trials, trial_length, 2), dtype=np.float64)
+    targets = np.zeros((num_trials, trial_length, 2), dtype=np.float64)
 
     for trial in range(num_trials):
-        last_values = np.array([0, 0], dtype=np.float32)
+        last_values = np.array([0, 0], dtype=np.float64)
         next_input_time = np.random.randint(min_gap, max_gap + 1, size=2)
 
         for t in range(trial_length):
