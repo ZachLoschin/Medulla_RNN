@@ -1,2 +1,4 @@
 venv/*
 Tutorials_and_Learning/Data
+*.pth
+*.pyc
